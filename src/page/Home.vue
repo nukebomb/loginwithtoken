@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>home page</h1>
+    <h1 v-if="msg">home page</h1>
     <p>{{ msg }}</p>
   </div>
 </template>
@@ -8,28 +8,35 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
       msg: null
     }
   },
-  beforeMount () {
+  created() {
     this.getData()
   },
   methods: {
-    getData () {
+    getData() {
       this.$http.get('/api/user').then(res => {
         this.msg = res
         console.log(res)
       })
     }
   }
+  // beforeRouteEnter (to, from ,next) {
+  //   var msg = null
+  //   axios.get('/api/user').then(res => {
+  //     msg = res
+  //   })
+  // }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {

@@ -21,7 +21,7 @@ http.interceptors.response.use(
     let data = response.data
     if (data.code === 200) {
       return data.data
-    } 
+    }
     if (data.code === 401) {
       window.location.href = '/login'
     }

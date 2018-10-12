@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Microsoft Yahei",sans-serif;
+}
+*:focus {
+  outline: none;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.fillcontainer {
+  width: 100%;
+  height: 100%;
+}
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.btn {
+  align-items: center;
+  border-radius: .25rem;
+  box-shadow: 0 4px 6px rgba(34,19,107,.15);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: .05em;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  transition-property: background;
+}
